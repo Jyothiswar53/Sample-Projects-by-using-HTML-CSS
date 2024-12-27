@@ -1,0 +1,136 @@
+⁠⁠{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #020202;
+    color: #ffffff;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.sidebar {
+    background-color: #000000;
+    padding: 20px;
+    margin-right: 1000px;
+}
+.sidebar h2 {
+    color: #E50914;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.sidebar ul li {
+    padding: 10px 0;
+    color: #b3b3b3;
+    cursor: pointer;
+}
+
+.main-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #141414;
+    border-bottom: 1px solid #333;
+}
+
+header h1 {
+    
+    font-size: 24px;
+    color: #ffffff;
+}
+
+header input {
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    width: 250px;
+    background-color: #333;
+    color: #ffffff;
+}
+
+.banner {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    color: #ffffff;
+    text-align: center;
+}
+
+.banner h2 {
+    font-size: 28px;
+}
+
+.banner button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.banner button:first-of-type {
+    background-color: #E50914;
+    color: #ffffff;
+}
+
+.banner button:last-of-type {
+    background-color: #ffffff;
+    color: #141414;
+}
+
+.movies-section {
+    margin-top: 20px;
+    padding-right: 100px;
+    
+}
+
+.movies-section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.movies-row {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.movie-item {
+    background-color: #333;
+    width: 150px;
+    height: 225px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: #b3b3b3;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+}
