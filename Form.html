@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        body {
+            background: linear-gradient(115deg,
+                    rgba(28, 28, 175, 0.8),
+                    rgba(34, 34, 138, 0.7)),
+                url("https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg");
+            background-size: cover;
+            background-blend-mode: overlay;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            background-attachment: fixed;
+        }
+
+        .container {
+            width: 700px;
+            height: 1250px;
+            margin: auto;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            display: grid;
+            font-size: 19px;
+            font-family:  Arial, sans-serif;
+        }
+
+        .name,
+        .email,
+        .age,
+        .radio,
+        .checkbox,
+        .dropdown {
+            border: none;
+            border-radius: 20px;
+            display: grid;
+           
+            margin: 20px;
+
+        }
+
+        .textarea {
+         
+            border-radius: 20px;
+            display: grid;
+            margin-bottom: 20px;
+            overflow: hidden;
+            overflow: scroll;
+        }
+
+        .button,
+        .submit1 {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+            height: 30px;
+            align-content: center;
+        }
+
+        button:hover {
+            background-color: #048b04;
+        }
+
+        .lan {
+            margin: 10px;
+        }
+
+        input[type="email"],
+        input[type="name"],
+        input[type="number"],
+        select[name="dropdown"],
+        textarea {
+            height: 40px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding-right: 1px;
+            font-size: 16px;
+            width: 100%;
+
+        }
+       
+    </style>
+</head>
+
+<body>
+    <h1>Survey Form</h1>
+    <p>Thank you for providing the Certification</p>
+    <div class="container">
+        <div class="name">
+            <label align="left">Name :</label>
+            <input type="name" placeholder="Enter your Name">
+        </div>
+        <div class="email">
+            <label align="left">Email :</label>
+            <input type="email" placeholder="Enter your Email">
+        </div>
+        <div class="age">
+            <label align="left">Age :</label>
+            <input type="number" name="number" placeholder="Enter your Age" />
+        </div>
+        <div class="dropdown">
+            <div align="left">Which state are you belongs to ?</div>
+            <select name="dropdown" placeholder="Choose your state">
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Others">others</option>
+            </select>
+        </div>
+        <div class="radio">
+            <div align="left"> Which language did you know ?</div>
+            <div align="left">
+                <input type="radio" name="radio" class="lan">C</br>
+                <input type="radio" name="radio" class="lan">JAVA</br>
+                <input type="radio" name="radio" class="lan">PYTHON</br>
+                <input type="radio" name="radio" class="lan">C++</br>
+            </div>
+        </div>
+        <div class="dropdown">
+            <div align="left"> Which Class are you Studying ?</div>
+            <select name="dropdown" placeholder="Choose your state">
+                <option>10th</option>
+                <option>11th</option>
+                <option>12th</option>
+                <option>others</option>
+            </select>
+        </div>
+        <div class="checkbox">
+            <div align="left"> WHICH PROGRAMMING LANGUAGES SHOULD YOU KNOW?</div>
+            <div align="left">
+                <input type="checkbox" name="JAVA" value="on" class="lan" />JAVA</br>
+                <input type="checkbox" name="PYTHON" value="on" class="lan" />PYTHON</br>
+                <input type="checkbox" name="C++" value="on" class="lan" />C++</br>
+                <input type="checkbox" name="C" value="on" class="lan" />C</br>
+                <input type="checkbox" name="PHP" value="on" class="lan" />PHP</br>
+            </div>
+        </div>
+            <div align="left" class="comment">Any Comments or Suggestions :</div>
+            <div class="textarea">
+            <div><textarea placeholder="Describe yourself"></textarea></div>
+        </div>
+        <div class="button1">
+            <button type="submit" class="submit1">Submit</button>
+        </div>
+    </div>
+</body>
+</html>
