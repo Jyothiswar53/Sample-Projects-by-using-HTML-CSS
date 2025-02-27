@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animationss</title>
+    <style>
+        body {
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            row-gap: 70px;
+            background: linear-gradient(90deg, black, darkblue, darkviolet, rgb(225, 42, 201));
+            background-size: 400% 400%;
+            animation: gradient 5s linear infinite alternate;
+        }
+
+        .loader {
+            width: 250px;
+            height: 250px;
+            border-right: 5px solid #fff;
+            border-top: 5px solid #f00;
+            border-bottom: 5px solid rgb(13, 73, 224);
+            border-left: 5px solid rgb(242, 227, 17);
+            border-radius: 50%;
+            position: relative;
+            border-width: 50px;
+            animation: spin 0.8s linear infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: box-shadow 0.3s ease-in-out;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.6),
+                0 0 30px rgba(255, 0, 0, 0.4);
+        }
+
+        .typing-text {
+            position: absolute;
+            color: white;
+            font-size: 40px;
+            margin: 0;
+            animation: no-rotate 0.8s linear infinite;
+        }
+
+        .typing-text::after {
+            content: "...!";
+            display: inline-block;
+            animation: blink 1s ease-in-out infinite;
+        }
+
+        .loader:hover {
+            box-shadow: 0 0 40px rgba(255, 255, 255, 0.9),
+                0 0 60px rgba(255, 0, 0, 0.8),
+                0 0 80px rgba(13, 73, 224, 0.6),
+                0 0 80px #0af415f3,
+                0 0 80px #0af415f3;
+
+        }
+
+        .typing {
+            color: white;
+            cursor: pointer;
+            font-size: 50px;
+            overflow: hidden;
+            margin-top: 0px;
+            white-space: nowrap;
+            border-right: 2px solid white;
+            display: inline-block;
+            width: 0;
+            transition: 2.5s;
+            animation: typing 3s steps(100, end) infinite alternate;
+        }
+
+        .typing:hover {
+            text-shadow: 2px 3px 2px red;
+            font-size: 70px;
+            color: cyan;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes no-rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(-360deg);
+            }
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes typing {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 15ch;
+            }
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 50% 50%;
+            }
+
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2 class="typing">I am jyothiswar..!</h2>
+    <div class="loader">
+        <h2 class="typing-text">Loading</h2>
+    </div>
+</body>
+
+</html>
