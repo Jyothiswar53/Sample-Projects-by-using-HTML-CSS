@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jyothiswar</title>
+    <style>
+        body {
+            background: rgb(34, 180, 233);
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+
+        .logo1 {
+            width: 270px;
+            height: 60px;
+        }
+
+        .SmallBox {
+            display: flex;
+            gap: 35px;
+            margin-right: 35px;
+        }
+
+        .SmallBox h3 {
+            position: relative;
+            margin: 0;
+            font-size: 16px;
+            transition: color 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .SmallBox h3::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -5px;
+            width: 0;
+            height: 2px;
+            background-color: black;
+            transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
+        }
+
+        .SmallBox h3:hover {
+            color: red;
+        }
+
+        .SmallBox h3:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        .container1 {
+            text-align: center;
+            padding: 100px 20px 40px;
+        }
+
+        .Handcrafted {
+            font-weight: bold;
+            font-size: 35px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            animation: typing 3s steps(25, end) infinite alternate;
+        }
+
+        .getStarted {
+            width: 80%;
+            max-width: 300px;
+            height: 35px;
+            padding: 5px;
+            border-radius: 8px;
+            border: none;
+            color: #333;
+            background: #eee;
+            font-size: 17px;
+        }
+
+        .getStarted::placeholder {
+            color: #888;
+            font-size: 17px;
+            border-radius: 30px;
+        }
+
+        .get button {
+            width: 150px;
+            height: 35px;
+            background-color: yellow;
+            border-radius: 9px;
+            font-weight: bold;
+            border: none;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .get button:hover {
+            background-color: red;
+            color: white;
+        }
+
+        .logoo,
+        .tyre,
+        .sky {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            margin-left: 20%;
+        }
+
+        .flame,
+        .truck,
+        .battery {
+            width: 80px;
+            height: 100px;
+            background: orange;
+            border-radius: 5px;
+        }
+
+        .premium,
+        .fast {
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .trombones,
+        .Every {
+            font-size: 16px;
+        }
+
+        .youtube {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            padding: 20px;
+        }
+
+        .insideBox {
+            border: 1px solid black;
+            width: 90%;
+            max-width: 240px;
+            background-color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .pre {
+            text-align: center;
+            margin-left: -148px;
+        }
+
+        .tenor {
+            font-size: 20px;
+            font-weight: bold;
+            background-color: khaki;
+            padding: 10px;
+        }
+
+        .num {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .select {
+            border: none;
+            padding: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            background: yellow;
+            font-weight: bold;
+            border-radius: 10px;
+            transition: 1s;
+        }
+
+
+        .select:hover {
+            background-color: red;
+            color: white;
+        }
+
+        .ending {
+            background-color: aliceblue;
+            text-align: right;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .end,
+        .end1 {
+            font-size: 16px;
+            margin-right: 25px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+                padding: 10px;
+            }
+
+            .SmallBox {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            .logoo,
+            .tyre,
+            .sky {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .getStarted,
+            .get button {
+                width: 75%;
+                max-width: 100%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img class="logo1"
+            src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png">
+        <div class="SmallBox">
+            <h3>Uses</h3>
+            <h3>How it Works</h3>
+            <h3>Pricing</h3>
+        </div>
+    </div>
+
+    <div class="container1">
+        <div class="Handcrafted">Handcrafted, Home-made Masterpieces</div>
+        <input class="getStarted" type="email" placeholder="Enter Email address">
+        <div class="get">
+            <button>GET STARTED</button>
+        </div>
+    </div>
+
+    <div class="logoo">
+        <div class="flame"></div>
+        <div>
+            <h2 class="premium">PREMIUM MATERIALS</h2>
+            <p class="trombones">Our trombones use the shiniest brass, sourced locally, increasing longevity.</p>
+        </div>
+    </div>
+
+    <div class="tyre">
+        <div class="truck"></div>
+        <div>
+            <h2 class="fast">Fast Shipping</h2>
+            <p class="Every">We ensure you receive your trombone promptly with free returns if unsatisfied.</p>
+        </div>
+    </div>
+
+    <div class="sky">
+        <div class="battery"></div>
+        <div>
+            <h2 class="fast">Quality Assurance</h2>
+            <p class="Every">Every purchase is checked for damages and tested for pitch.</p>
+        </div>
+    </div>
+
+    <div class="youtube">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/3Kxf2dHlDpQ?si=-fxAmsVREiBjJwDA"
+            allowfullscreen></iframe>
+    </div>
+
+    <div class="box">
+        <div class="insideBox">
+            <div class="tenor">Tenor Trombone</div>
+            <div class="num">$600</div>
+            <div class="pre">
+                <pre>
+                    Accusamus, veritatis, 
+                    officia id reprehenderit
+                    beatae quod ab deserunt quo est?
+                </pre>
+            </div>
+            <button class="select">SELECT</button>
+        </div>
+        <div class="insideBox">
+            <div class="tenor">Bass Trombone</div>
+            <div class="num">$1000</div>
+            <div class="pre">
+                <pre>
+                    Esse vitae temporibus
+                    Illo dolorum earum 
+                    praesentium sed ipsum!
+                </pre>
+            </div>
+            <button class="select">SELECT</button>
+        </div>
+        <div class="insideBox">
+            <div class="tenor">Valve Trombone</div>
+            <div class="num">$1500</div>
+            <div class="pre">
+                <pre>
+                    Lorem ipsum dolor sit 
+                    amet consectetur 
+                    Adipisicing elit.
+                </pre>
+            </div>
+            <button class="select">SELECT</button>
+        </div>
+    </div>
+
+    <div class="ending">
+        <div class="end">Privacy | Terms | Contact</div>
+        <div class="end1">Copyright 2025, Jyothi's Original Trombones</div>
+    </div>
+</body>
+
+</html>
