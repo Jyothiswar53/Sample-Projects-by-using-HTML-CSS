@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Documentation</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav {
+            width: 250px;
+            height: 100vh;
+            background: #333;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            overflow-y: auto;
+        }
+
+        .language {
+            display: flex;
+            margin-top: 120%;
+            justify-content: center;
+            align-items: center;
+            padding: 0px;
+            margin-left: -44px;
+
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            animation: example 3s ease-in-out 1s infinite alternate forwards;
+        }
+
+        .java:hover {
+            background: white;
+            transition: all 1s;
+            color: black;
+        }
+
+        .content {
+            margin-left: 300px;
+            padding: 20px;
+            max-width: 800px;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .java {
+            padding: 0px;
+            width: 16%;
+            margin-left: 7px;
+        }
+
+        @keyframes example {
+            0% {
+                background-color: red;
+                left: 0px;
+            }
+
+            50% {
+                background-color: yellow;
+                left: 50px;
+            }
+
+            100% {
+                background-color: blue;
+                left: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <h2>Java Documentation</h2>
+        <a href="#intro">Introduction</a>
+        <a href="#syntax">Syntax</a>
+        <a href="#variables">Variables</a>
+        <a href="#datatypes">Data Types</a>
+        <a href="#functions">Methods</a>
+        <a href="#oop">Object-Oriented Programming</a>
+        <div class="language">
+            Learn more about <a class="java" href="https://www.w3schools.com/java/" target="_blank">JAVA..</a>
+        </div>
+    </nav>
+    <div class="content">
+        <section id="intro">
+            <h1>Introduction</h1>
+            <p>Java is a high-level, object-oriented programming language that is widely used for building
+                applications.Java contains a standard library of objects, such as Array, Date, and Math, and a core set
+                of language elements such as operators, control structures, and statements. Core Java can be extended
+                for a variety of purposes by supplementing it with additional objects.</p </section>
+            <section id="syntax">
+                <h2>Syntax</h2>
+                <p>Java uses a class-based structure and requires every application to have a main method.</p>
+                <pre>
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, Java!");
+    }
+}
+            </pre>
+            </section>
+            <section id="variables">
+                <h2>Variables</h2>
+                <p>Java is a statically typed language, meaning variables must have a declared type.</p>
+                <pre>
+int age = 25;
+double height = 5.9;
+String name = "John";
+            </pre>
+            </section>
+            <section id="datatypes">
+                <h2>Data Types</h2>
+                <p>Java supports primitive data types such as int, float, boolean, and char.</p>
+                <pre>
+boolean isJavaFun = true;
+char grade = 'A';
+float pi = 3.14f;
+            </pre>
+            </section>
+            <section id="functions">
+                <h2>Methods</h2>
+                <p>Methods in Java are defined inside classes and follow a specific syntax.</p>
+                <pre>
+public class Main {
+    static void greet(String name) {
+        System.out.println("Hello, " + name);
+    }
+}
+            </pre>
+            </section>
+            <section id="oop">
+                <h2>Object-Oriented Programming</h2>
+                <p>Java is fully object-oriented and uses classes and objects.</p>
+                <pre>
+class Dog {
+    String name;
+    Dog(String name) {
+        this.name = name;
+    }
+    void bark() {
+        System.out.println("Woof!");
+    }
+}
+            </pre>
+            </section>
+    </div>
+</body>
+
+</html>
